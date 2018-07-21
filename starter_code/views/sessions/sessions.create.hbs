@@ -1,4 +1,4 @@
-<h2> Sign Up </h2>
+<h2> Log In </h2>
 
 {{#if errorMessage}}
   <p class="error-message">
@@ -6,17 +6,11 @@
   </p>
 {{/if}}
 
-<form action="/signup" method="post">
-  <div>
-    <label for="name-input"> Name </label>
-    <input type="text" name="name" id="name-input"
-      placeholder="e.g., Diana Prince">
-  </div>
-
+<form action="/users/create" method="POST">
   <div>
     <label for="email-input"> Email </label>
     <input type="email" name="email" id="email-input"
-      placeholder="e.g., diana@themyscira.agency">
+      placeholder="e.g., xena@warrior.company">
   </div>
 
   <div>
@@ -25,12 +19,12 @@
       placeholder="e.g., ••••••••••••">
   </div>
 
-  <button> Create New Account </button>
+  <button> Log In </button>
 </form>
 
 <p>
-  Already have an account?
-  <a href="/login">
-    Log in.
+  Don't have an account?
+  <a href="/signup">
+    Create an account.
   </a>
 </p>
