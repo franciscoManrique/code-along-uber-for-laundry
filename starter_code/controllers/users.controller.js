@@ -20,10 +20,7 @@ module.exports.doCreate = (req, res, next) =>{
                  return newUser.save()
                  .then((user) => {
                     res.render('sessions/sessionsCreate')
-
-
-                 })
-                 
+                 });               
             }
         })
         .catch(error =>{
